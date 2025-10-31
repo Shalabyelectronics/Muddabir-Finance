@@ -3,7 +3,7 @@
 The HTML dir attribute, which specifies text directionality (e.g., dir="rtl" for right-to-left or dir="ltr" for left-to-right), is applied directly to HTML elements, most commonly the <html> tag for the entire document.
 While CSS also has a direction property, the W3C and CSS Working Group recommend defining the primary document direction on the <html> element using the dir attribute. This ensures correct bidirectional layout even in the absence of CSS. 
 -->
-<html lang="en" dir="rtl">
+<html lang="ar" dir="rtl">
   <head>
     <!-- SEO Enhanced by adding a description  meta, honestly I copied this description from the demo from te last project as I believe that will be provided from us from a content creation team 🦥-->
     <meta
@@ -41,18 +41,53 @@ While CSS also has a direction property, the W3C and CSS Working Group recommend
     ======================================================== -->
     <div class="dashboard-container">
       <!-- Aside navbar will have two version one for mediaum size and one for larg and beyond -->
-       <aside class="aside-nav-container">
+      <aside class="aside-nav-container">
         <!-- Aside-mediaum-version start from 768px to 1280px -->
-         <div class="aside-nav-mediaum"></div>
-          <!-- Aside-larg-version start from 1280px and beyond-->
-            <div class="aside-nav-larg"></div>
-       </aside>
-       <main>
-        <header>
-          
+        <div class="aside-nav-mediaum"></div>
+        <!-- Aside-larg-version start from 1280px and beyond-->
+        <div class="aside-nav-larg"></div>
+      </aside>
+      <main class="main-container">
+        <header class="header">
+          <!-- Later I'm going to working on it -->
+          <!-- <div class="overlay"></div> -->
+          <div class="header-content">
+            <div class="logo-wrapper">
+              <div class="logo-icon-wrapper">
+                <img
+                  src="./images/icons/coins-solid-full.png"
+                  alt="Mudabbir logo"
+                />
+              </div>
+              <div class="logo-title">
+                <h1>مدبّر</h1>
+                <span>إدارة أموالك بذكاء</span>
+              </div>
+            </div>
+            <div class="user-wrapper">
+              <div class="user-function">
+                <button class="function-btn search-function">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="function-btn notification-function">
+                  <i class="fa-regular fa-bell"></i>
+                </button>
+              </div>
+              <div class="user-image">
+                <img
+                  src="./images/avatar-1.jpg"
+                  alt=" صورة المستخدم سيف اسامة "
+                />
+              </div>
+            </div>
+            <div class="user-status">
+              <div class="online"><span>متصل</span></div>
+              <div class="off-line remove"><span>غير متصل</span></div>
+            </div>
+          </div>
         </header>
-       </main>
+      </main>
     </div>
-    <h2>Tesr</h2>
+   
   </body>
 </html>

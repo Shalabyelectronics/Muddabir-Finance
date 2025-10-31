@@ -114,7 +114,6 @@ html {
 
 body {
   font-family: "IBM Plex Sans Arabic", sans-serif;
-  font-size: 1.6rem;
 }
 
 /* Set Fonts Sizes */
@@ -317,6 +316,13 @@ a {
   padding-block: 8rem;
 }
 
+.active {
+  display: block;
+}
+.remove {
+  display: none;
+}
+
 /* Centering Element using Flex 🐣🎉❤️ Finally */
 .center-el {
   display: flex;
@@ -327,14 +333,116 @@ a {
 .flex-start {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1.25rem;
 }
 
 /* ============================================================================
-    1. Header Section ---> Navbar Component Our Development Journey start 👾🫡
+    1. Header Section ---> User information and functions 👾🫡
     ===========================================================================
 */
+.header {
+border: 0.2rem solid var(--color-black-200);
+padding: 0.8rem;
+border-radius: 0.8rem;
+box-shadow: 0 0 0.5rem var(--color-black-200);
+}
+.header-content > div:not(:last-child) {
+ margin-bottom: 1.5rem;
+}
+.main-container {
+  padding-inline: 1.6rem;
+  padding-block: 1.6rem 3.2rem;
+}
+.header-content {
+  /* background-color: #3b82f6; */
+}
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #65df95;
+}
+.logo-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.8rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: var(--color-blue-500);
+}
+.logo-icon-wrapper > img {
+  width: 2.4rem;
+}
+.logo-title h1 {
+  font-size: 2.4rem;
+}
+.logo-title span {
+  color: var(--color-black-200);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.user-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  /* background-color: #e7000b; */
+}
 
+.user-image > img {
+  width: 4.8rem;
+}
+.user-status {
+  display: flex;
+  justify-content: center;
+}
+
+.user-function {
+}
+.function-btn {
+  position: relative;
+  border: 0.2rem solid var(--color-black-200);
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.8rem;
+}
+.function-btn i {
+  font-size: 1.2rem;
+}
+.notification-function::after {
+  content: "2";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 1rem;
+  color: var(--color-white-400);
+  font-weight: 600;
+  background-color: var(--color-red-300);
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  top:0;
+  right: -0.8rem;
+  transform: translate(-50%,-50%);
+}
+
+.user-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  border: 0.1rem solid gray;
+  padding: 0.6rem;
+  border-radius: 1.6rem;
+}
+.user-image img {
+  border-radius: 1.5rem;
+}
+.user-status{
+  background-color: var(--color-green-200);
+  padding-block: 1rem;
+}
 /* 
 
 Media Query
@@ -355,6 +463,10 @@ Extra extra large	xxl	≥1400px
 @media screen and (min-width: 640px) {
 }
 @media screen and (min-width: 768px) {
+  .logo-icon-wrapper {
+    width: calc(var(--spacing) * 16);
+    height: calc(var(--spacing) * 16);
+  }
 }
 @media screen and (min-width: 1295px) {
 }
