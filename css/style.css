@@ -1,0 +1,360 @@
+/* ========================================================
+    🔨 We are Going to Build an Awousom Responsive website
+    ========================================================
+*/
+
+/* Notes Steps */
+/* 
+
+*/
+
+/* ========================================================
+    Colecting informations  
+    ========================================================
+*/
+
+/*
+
+#Demo site that we want to mock it : 
+https://mudabbir.vercel.app/
+
+#Guids and Hints Thanks for Eng Maryam for All the efforts she did and still doing for us 💐
+
+https://frontend-tasks-bice.vercel.app/assignments/5/details
+
+>> WEbsite Font and colors <<
+
+--->Font<---
+Font-family : IBM Plex Sans Arabic,sans-serif
+Note: font wieght from 100 to 700
+--->Colors<---
+
+
+
+
+*/
+
+/* ========================================================
+    1. GLOBAL STYLES
+    ========================================================
+*/
+
+:root {
+  /* Colors 100 mean light color 500 mean dark color*/
+  --color-blue-500: #193cb8;
+  --color-blue-400: #2854f4;
+  --color-blue-300: #3b82f6;
+  --color-blue-200: #cefafe;
+  --color-blue-100: #eff6ff;
+  --color-black-500: #101828;
+  --color-black-300: #4a5565;
+  --color-black-200: #6a7282;
+  --color-white-100: #ffffff;
+  --color-white-200: #f8fafc;
+  --color-white-300: #fefeff;
+  --color-white-400: #f3f4f6;
+  --color-green-100: #f0fdf4;
+  --color-green-200: #dbfce7;
+  --color-green-300: #65df95;
+  --color-green-400: #005f78;
+  --color-green-500: #008236;
+  --color-red-500: #e7000b;
+  --color-red-400: #fb2c36;
+  --color-red-300: #f54a00;
+  --color-red-100: #ffedd4;
+  --color-brown-500: #9f2d00;
+  --color-purple-500: #6e11b0;
+  --color-purple-100: #f3e8ff;
+  --color-yellow-100: #fef9c2;
+  --color-cyan-500: #0092b8;
+  --color-cyan-100: #cefafe;
+  --color-orange-500: #ba4d00;
+  --color-pink-100: #fce7f3;
+  --color-pink-500: #e60076;
+  /* Spacing Unit */
+  --spacing: 0.25rem;
+}
+
+/* Reset your defult settings first */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* I think it better to set the border too, because I want to add them maniually */
+  border: 0 solid;
+}
+
+/* 🔨 Note : You noticed I did not reset the Margin and padding for all elements in html ? because I want to practice which elements have default padding and margin */
+
+::selection {
+  background-color: var(--color-blue-400);
+  color: var(--color-white-100);
+}
+
+:focus-visible {
+  outline: 3px solid #ffd700;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+html {
+  /* Sets 1rem to 10px (10/16 = 62.5%) for easier scaling */
+  font-size: 62.5%;
+  /* I did search about why adding line-height in html and using unitless value because  
+  -------------
+  Setting line-height on html ensures a consistent baseline for text elements across the site. A unitless line-height (e.g., line-height: 1.5;) is relative to the element’s font size, making it flexible and maintainable. Since html is the root, this value propagates cleanly to all descendants.
+  */
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+}
+
+body {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-size: 1.6rem;
+}
+
+/* Set Fonts Sizes */
+
+button {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+span {
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+span,
+a {
+  display: inline-block;
+}
+/* Image */
+img {
+  max-width: 100%;
+}
+
+/* Link */
+a {
+  text-decoration: none;
+}
+
+/* Global classes */
+
+/* Aligning */
+
+.align-text-center {
+  text-align: center;
+}
+
+/* Font-sizing */
+
+.fs-12 {
+  font-size: 1.2rem;
+}
+
+.fs-14 {
+  font-size: 1.4rem;
+}
+
+.fs-16 {
+  font-size: 1.6rem;
+}
+
+.fs-18 {
+  font-size: 1.8rem;
+}
+
+.fs-20 {
+  font-size: 2rem;
+}
+.fs-24 {
+  font-size: 2.4rem;
+}
+.fs-26 {
+  font-size: 2.6rem;
+}
+.fs-28 {
+  font-size: 2.8rem;
+}
+
+.fs-30 {
+  font-size: 3rem;
+}
+
+.fs-36 {
+  font-size: 3.6rem;
+}
+.fs-48 {
+  font-size: 4.8rem;
+}
+/* Line height */
+/* As I can't put dot between two number 🏃‍♂️‍➡️ I put o letter */
+.lh-1o2 {
+  line-height: 1.2;
+}
+/* Inherit please from your parent (Kids👨‍👩‍👧‍👦)*/
+.inhirt-plz {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.br-5 {
+  border-radius: 0.5rem;
+}
+
+/* Spaces */
+
+/* Main Sections margin buttom spacing  between each section header , main but not the footer*/
+
+/* Margins */
+
+.mb-4 {
+  margin-bottom: 0.4rem;
+}
+.mb-8 {
+  margin-bottom: 0.8rem;
+}
+.mb-16 {
+  margin-bottom: 1.6rem;
+}
+
+.mb-24 {
+  margin-bottom: 2.4rem;
+}
+.mb-28 {
+  margin-bottom: 2.8rem;
+}
+.mb-32 {
+  margin-bottom: 3.2rem;
+}
+.mb-48 {
+  margin-bottom: 4.8rem;
+}
+.mb-50 {
+  margin-bottom: 5rem;
+}
+.mb-64 {
+  margin-bottom: 6.4rem;
+}
+.mb-128 {
+  margin-bottom: 12.8rem;
+}
+
+.mr-12 {
+  margin-right: 1.2rem;
+}
+
+.mr-16 {
+  margin-right: 1.6rem;
+}
+
+.ml-8 {
+  margin-left: 0.8rem;
+}
+
+/* Padding */
+.section-bb {
+  border-bottom: 0.4rem solid #000;
+}
+.pd-4 {
+  padding: 0.4rem;
+}
+.pd-8 {
+  padding: 0.8rem;
+}
+.pd-16 {
+  padding: 1.6rem;
+}
+.pd-32 {
+  padding: 3.2rem;
+}
+
+.pb-r-16 {
+  padding-right: 1.6rem;
+}
+
+.pb-4 {
+  padding-bottom: 0.4rem;
+}
+
+.pb-8 {
+  padding-bottom: 0.8rem;
+}
+.pb-16 {
+  padding-bottom: 1.6rem;
+}
+.pb-32 {
+  padding-bottom: 3.2rem;
+}
+.pb-64 {
+  padding-bottom: 6.4rem;
+}
+
+.pb-100 {
+  padding-bottom: 10rem;
+}
+/* Special padding */
+
+/* ========================================================
+    *. Shared Classes: will used frequncy 👾🫡
+    ========================================================
+*/
+
+/* Generals Components */
+.section-header-component {
+  margin-bottom: 4.8rem;
+}
+
+.section-padding {
+  padding-block: 8rem;
+}
+
+/* Centering Element using Flex 🐣🎉❤️ Finally */
+.center-el {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-start {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* ============================================================================
+    1. Header Section ---> Navbar Component Our Development Journey start 👾🫡
+    ===========================================================================
+*/
+
+/* 
+
+Media Query
+
+Breakpoint	Class infix	Dimensions
+X-Small	None	<576px
+Small	sm	≥576px
+Medium	md	≥768px
+Large	lg	≥992px
+Extra large	xl	≥1200px
+Extra extra large	xxl	≥1400px
+
+*/
+@media screen and (min-width: 500px) {
+}
+@media screen and (min-width: 509px) {
+}
+@media screen and (min-width: 640px) {
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1295px) {
+}
