@@ -41,9 +41,10 @@ Note: font wieght from 100 to 700
 
 :root {
   /* Colors 100 mean light color 500 mean dark color*/
-  --color-blue-500: #193cb8;
-  --color-blue-400: #2854f4;
-  --color-blue-300: #3b82f6;
+  --color-blue-600: #193cb8;
+  --color-blue-500: #2854f4;
+  --color-blue-400: #3b82f6;
+  --color-blue-300: #dbeafe;
   --color-blue-200: #cefafe;
   --color-blue-100: #eff6ff;
   --color-black-500: #101828;
@@ -56,8 +57,9 @@ Note: font wieght from 100 to 700
   --color-green-100: #f0fdf4;
   --color-green-200: #dbfce7;
   --color-green-300: #65df95;
-  --color-green-400: #005f78;
-  --color-green-500: #008236;
+  --color-green-400: #00a63e;
+  --color-green-500: #005f78;
+  --color-green-600: #008236;
   --color-red-500: #e7000b;
   --color-red-400: #fb2c36;
   --color-red-300: #f54a00;
@@ -114,6 +116,7 @@ html {
 
 body {
   font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-size: 1.6rem;
 }
 
 /* Set Fonts Sizes */
@@ -133,6 +136,9 @@ ul {
 span,
 a {
   display: inline-block;
+}
+a {
+  font-size: 1.6rem;
 }
 /* Image */
 img {
@@ -336,6 +342,15 @@ a {
   gap: 1.25rem;
 }
 
+/* Display status have two role -on and -off */
+.aside-display-status {
+  display: none;
+}
+
+/* ============================================================================
+    0. Dashboard main container ---> The container that hold all the dashboard components.🦚
+    ===========================================================================
+*/
 /* ============================================================================
     1. Header Section ---> User information and functions 👾🫡
     ===========================================================================
@@ -343,12 +358,15 @@ a {
 .main-container {
   padding-inline: 1.6rem;
   padding-block: 1.6rem 3.2rem;
+  background-color: #21ff7a;
+  width: 100%;
 }
 .header {
   border: 0.2rem solid var(--color-black-200);
   padding: calc(var(--spacing) * 2);
-  border-radius: calc(var(--spacing) * 2);;
+  border-radius: calc(var(--spacing) * 2);
   box-shadow: 0 0 0.5rem var(--color-black-200);
+  margin-bottom: calc(var(--spacing) * 7);
 }
 .header-content {
   display: flex;
@@ -470,9 +488,192 @@ a {
   transform: translateY(-50%);
 }
 
+/* ============================================================================
+    2. Aside Section ---> User Controls and Actions 👾🎮🎛️
+    ===========================================================================
+*/
+/* It is in a 768px breakpoint and 1280px breakpoint */
+
+/* ============================================================================
+    3. Finance cards Section ---> User Over views cards 👾🎮🎛️
+    ===========================================================================
+*/
+.finance-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 7);
+  margin-bottom: calc(var(--spacing) * 7);
+}
+
+.card {
+  background-color: var(--color-white-100);
+  padding: calc(var(--spacing) * 8);
+  border-radius: calc(var(--spacing) * 4);
+  box-shadow: 0 0 0.5rem var(--color-black-200);
+}
+.card h3 {
+  color: var(--color-black-200);
+}
+.card p {
+  font-size: 3rem;
+  color: var(--color-black-500);
+  font-weight: 700;
+}
+
+.card .gross-box i,
+.card .gross-box span,
+.card h3 {
+  font-size: 1.4rem;
+}
+.card .gross-box span {
+  font-weight: 600;
+}
+.card .gross-box.gross-up .fa-arrow-up,
+.card .gross-box.gross-up span {
+  color: var(--color-green-400);
+}
+.card .gross-box.gross-down .fa-arrow-down,
+.card .gross-box.gross-down span {
+  color: var(--color-red-500);
+}
+
+/* ============================================================================
+    4. Widgets Section ---> User Over views cards 👾🎮🎛️
+    ===========================================================================
+*/
+.finance-widgets-container {
+  background-color: #4a5565;
+}
+.widget-card {
+  background-color: var(--color-white-100);
+  padding: calc(var(--spacing) * 4);
+  border-radius: calc(var(--spacing) * 4);
+  box-shadow: 0 0 0.5rem var(--color-black-200);
+}
+
+.widget-card .widget-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: calc(var(--spacing) * 6);
+}
+
+.recent-activites-wrapper {
+  margin-bottom: calc(var(--spacing) * 4);
+}
+
+/* I add it usinf psaudo classes so for example when we request a data from aserver when it loads more cards it will apply a margin bottom for all except the last one. */
+.recent-activites-wrapper > div:not(:last-child) {
+  margin-bottom: calc(var(--spacing) * 3);
+}
+
+.recent-activites-wrapper .activity-box {
+  display: flex;
+  align-items: flex-start;
+  border-radius: calc(var(--spacing) * 2);
+  padding: calc(var(--spacing) * 4);
+  gap: calc(var(--spacing) * 4);
+}
+
+.activity-box .activity-category-wrapper {
+  margin-right: auto;
+}
+.activity-box .activity-category-wrapper {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.activity-box .activity-icon-wrapper {
+  width: calc(var(--spacing) * 7.5);
+  height: calc(var(--spacing) * 7.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.activity-icon-wrapper > i,
+.activity-details .activity-title,
+.activity-details .activity-status {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.activity-details .activity-time,
+.activity-details .activity-status {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.activity-details .activity-status,
+.activity-details .activity-time {
+  color: var(--color-black-200);
+}
+
+/* Last row in recent activities widget */
+.recent-activities-card .show-all-activities {
+  /* background-color: lightpink; */
+  padding-top: calc(var(--spacing) * 4);
+  border-top: 0.1rem solid   var(--color-black-200);
+}
+
+/* ---->Change link width */
+.recent-activities-card .show-all-activities a {
+  /* background-color: rgb(45, 159, 229); */
+  width: 100%;
+  text-align: center;
+  color: var(--color-blue-500);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* My first activity card  */
+
+/* ---> Icon color */
+.create-account .activity-icon-wrapper {
+  background-color: var(--color-blue-300);
+}
+.activity-icon-wrapper .fa-user-plus {
+  color: var(--color-blue-400);
+}
+/* ---->create account message backgrond */
+.recent-activites-wrapper .create-account {
+  background-color: var(--color-blue-100);
+}
+/* ---->create account left edge color */
+.recent-activites-wrapper .create-account {
+  border-left: 0.4rem solid var(--color-blue-400);
+}
+/* ---->create account category badge */
+.create-account .activity-category-wrapper .activity-category {
+  color: var(--color-blue-400);
+}
+/* My Second activity card  */
+
+/* ---> Icon color */
+.add-new-card .activity-icon-wrapper {
+  background-color: var(--color-green-200);
+}
+.activity-icon-wrapper .fa-credit-card {
+  color: var(--color-green-400);
+}
+/* ---->create account message backgrond */
+.recent-activites-wrapper .add-new-card {
+  background-color: var(--color-green-100);
+}
+/* ---->create account left edge color */
+.recent-activites-wrapper .add-new-card {
+  border-left: 0.4rem solid var(--color-green-400);
+}
+/* ---->create account category badge */
+.add-new-card .activity-category-wrapper .activity-category {
+  color: var(--color-green-400);
+}
+
+/*  */
+/* ============================================================================
+    Media Quary 👾🎮🎛️
+    ===========================================================================
+*/
 /* 
 
-Media Query
+---> Media Query <---
 
 Breakpoint	Class infix	Dimensions
 X-Small	None	<576px
@@ -516,29 +717,208 @@ Extra extra large	xxl	≥1400px
     width: 9rem;
   }
 }
+
 @media screen and (min-width: 768px) {
+  .dashboard-container {
+    display: flex;
+  }
   .main-container {
     margin-right: 1.6rem;
     padding: 3.2rem;
   }
   .header {
-
-  padding: calc(var(--spacing) * 3);;
-  border-radius: 0.8rem;
-  box-shadow: 0 0 0.5rem var(--color-black-200);
-}
+    padding: calc(var(--spacing) * 3);
+    border-radius: 0.8rem;
+    box-shadow: 0 0 0.5rem var(--color-black-200);
+  }
   .logo-icon-wrapper {
     width: calc(var(--spacing) * 16);
     height: calc(var(--spacing) * 16);
   }
   .logo-title h1 {
-  font-size: calc(var(--spacing) * 9);
+    font-size: calc(var(--spacing) * 9);
+  }
+  .logo-title span {
+    font-size: calc(var(--spacing) * 3.5);
+  }
+  /* ============================================================================
+    2. Aside Section ---> User Controls and Actions 👾🎮🎛️
+    ===========================================================================
+*/
+  /* For testing  */
+  .dashboard-container {
+    background-color: #005f78;
+  }
+  .aside-display-status {
+    display: block;
+  }
+  .aside-lg-status {
+    display: none;
+  }
+
+  .aside-nav-container {
+    display: fixed;
+    top: 0;
+    bottom: 0;
+    width: calc(var(--spacing) * 17);
+    /* background-color: #21ff7a; */
+  }
+
+  .aside-nav-mediaum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #96a4e7;
+    padding: calc(var(--spacing) * 4);
+    padding: calc(var(--spacing) * 3);
+    width: 100%;
+  }
+  .aside-logo-wrapper {
+    width: calc(var(--spacing) * 7.5);
+    height: calc(var(--spacing) * 10);
+    background-color: var(--color-blue-500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: calc(var(--spacing) * 5);
+    padding: var(--spacing);
+    margin-bottom: calc(var(--spacing) * 8);
+  }
+  .aside-nav-list {
+    background-color: #dbfce7;
+    margin-bottom: calc(var(--spacing) * 5);
+  }
+  .aside-nav-list ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--spacing) * 6);
+  }
+  .aside-nav-list ul li a i {
+    font-size: calc(var(--spacing) * 4);
+  }
+  .aside-nav-list ul li a img {
+    width: calc(var(--spacing) * 5);
+  }
+  .active-list-box {
+    background-color: var(--color-blue-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(var(--spacing) * 10);
+    height: calc(var(--spacing) * 10);
+    padding: calc(var(--spacing) * 2);
+    border-radius: calc(var(--spacing) * 3);
+    border-width: calc(var(--spacing) / 2);
+    border-style: solid;
+  }
+  .aside-nav-list ul .md-home a i {
+    color: var(--color-blue-400);
+  }
+  .aside-nav-list ul li a i {
+    color: var(--color-black-200);
+  }
+
+  /* ============================================================================
+    3. Finance cards Section ---> User Over views cards 👾🎮🎛️
+    ===========================================================================
+*/
+  .finance-cards-container {
+    flex-direction: row;
+    gap: calc(var(--spacing) * 5);
+    background-color: #ba4d00;
+    justify-content: space-between;
+  }
+
+  .card {
+    flex: 1 1 0%;
+  }
 }
-.logo-title span {
-  
-  font-size: calc(var(--spacing) * 3.5);
- 
+@media screen and (min-width: 1024px) {
+  /* ============================================================================
+    3. Finance cards Section ---> User Over views cards 👾🎮🎛️
+    ===========================================================================
+*/
+  .card p {
+    font-size: 4rem;
+  }
 }
-}
-@media screen and (min-width: 1295px) {
+@media screen and (min-width: 1280px) {
+  .aside-md-status {
+    display: none;
+  }
+  .aside-lg-status {
+    display: block;
+  }
+  /* ============================================================================
+    2. Aside Section ---> User Controls and Actions 👾🎮🎛️
+    ===========================================================================
+*/
+  .aside-nav-container {
+    width: calc(var(--spacing) * 65);
+    padding: calc(var(--spacing) * 6);
+  }
+  .aside-nav-larg {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 8);
+  }
+  .logo-row {
+    background-color: #65df95;
+    display: flex;
+    align-items: center;
+    gap: calc(var(--spacing) * 4);
+  }
+  .logo-text-wrapper h2 {
+    font-size: calc(var(--spacing) * 9);
+    line-height: 1.3;
+  }
+  .logo-text-wrapper span {
+    font-size: calc(var(--spacing) * 3);
+    font-weight: 700;
+    color: var(--color-black-200);
+  }
+  .lg-navbar-links {
+    background-color: lightcyan;
+  }
+  .lg-navbar-links ul,
+  .lg-navbar-actions ul {
+    background-color: lightskyblue;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 4);
+  }
+  .lg-navbar-links ul li,
+  .lg-navbar-actions ul li {
+    border: 0.1rem solid black;
+    border-radius: 0.8rem;
+  }
+  .lg-navbar-links ul li a,
+  .lg-navbar-actions ul li a {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--spacing) * 2);
+    padding: 1.2rem 1.6rem;
+    /* Icone size */
+    font-size: 1.8rem;
+  }
+  .lg-navbar-links ul li a span,
+  .lg-navbar-actions ul li a span {
+    /* Icone size */
+    font-size: 1.6rem;
+  }
+  .badget-icon {
+    width: calc(var(--spacing) * 6);
+  }
+  .badget-icon img {
+    display: block;
+  }
+  /* Row 3 */
+  .lg-navbar-actions {
+    background-color: lightpink;
+  }
+  .lg-navbar-actions > span {
+    font-size: 1.6rem;
+    margin-bottom: calc(var(--spacing) * 6);
+  }
 }

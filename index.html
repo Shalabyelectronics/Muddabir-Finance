@@ -11,14 +11,8 @@ While CSS also has a direction property, the W3C and CSS Working Group recommend
       content="Experience the DJI Mavic 4 Pro, the ultimate drone for professional photographers and videographers. With 8K video, 48MP photos, and advanced AI features, it's designed to elevate your aerial photography and videography to new heights."
     />
     <meta charset="UTF-8" />
-    <!-- I learnt about font Awsome because I was thinking how to add icons to the call to action buttons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="..."
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <!-- Locally font awsom below -->
+    <link rel="stylesheet" href="./css/all.min.css" />
     <!-- For Responsive website I'm going to add the below meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Using Font IBM Plex Sans Arabic from google fonts 🦚-->
@@ -41,12 +35,198 @@ While CSS also has a direction property, the W3C and CSS Working Group recommend
     ======================================================== -->
     <div class="dashboard-container">
       <!-- Aside navbar will have two version one for mediaum size and one for larg and beyond -->
-      <aside class="aside-nav-container">
+      <aside class="aside-nav-container aside-display-status">
         <!-- Aside-mediaum-version start from 768px to 1280px -->
-        <div class="aside-nav-mediaum"></div>
+        <div class="aside-nav-mediaum aside-md-status">
+          <!-- Aside (mediam size) logo icon -->
+          <div class="aside-logo-wrapper">
+            <img
+              src="./images/icons/coins-solid-full.png"
+              alt="Mudabbir logo"
+            />
+          </div>
+          <!-- Aside (mediam size) navbar list  -->
+          <div class="aside-nav-list">
+            <ul>
+              <li class="active-list-box md-home">
+                <a aria-label="home link" href=""
+                  ><i aria-hidden="true" class="fa-solid fa-house"></i
+                ></a>
+              </li>
+              <li>
+                <a aria-label="home link" href=""
+                  ><i
+                    aria-hidden="true"
+                    class="fa-solid fa-arrow-right-arrow-left"
+                  ></i
+                ></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    aria-hidden="true"
+                    src="./images/icons/chart-pie-solid-full.png"
+                    alt="chart pia fiannace"
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><i aria-hidden="true" class="fa-solid fa-piggy-bank"></i
+                ></a>
+              </li>
+              <li>
+                <a href=""
+                  ><i
+                    aria-hidden="true"
+                    class="fa-solid fa-file-invoice-dollar"
+                  ></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <!-- Aside (mediam size) action list -->
+          <div class="aside-quick-list">
+            <ul>
+              <li class="active-list-box">
+                <a aria-label="Send a dashboard action" href="#"
+                  ><i aria-hidden="true" class="fa-solid fa-paper-plane"></i
+                ></a>
+              </li>
+              <li class="active-list-box">
+                <a aria-label="Add entry action" href="#"
+                  ><i aria-hidden="true" class="fa-solid fa-plus"></i
+                ></a>
+              </li>
+              <li class="active-list-box">
+                <a aria-label="Check receipt action" href="#"
+                  ><i class="fa-solid fa-receipt"></i
+                ></a>
+              </li>
+              <li class="active-list-box">
+                <a aria-label="Check statistics action" href=""
+                  ><i aria-hidden="true" class="fa-solid fa-chart-line"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <!-- Aside-larg-version start from 1280px and beyond-->
-        <div class="aside-nav-larg"></div>
+        <div class="aside-nav-larg aside-lg-status">
+          <!-- Row-1 Logo -->
+          <div class="logo-row">
+            <div class="logo-icon-wrapper">
+              <img
+                src="./images/icons/coins-solid-full.png"
+                alt="Mudabbir logo"
+              />
+            </div>
+            <div class="logo-text-wrapper">
+              <h2>مدبّر</h2>
+              <span>إدارة أموالك بذكاء</span>
+            </div>
+          </div>
+          <!-- Row-2 -->
+          <div class="lg-navbar-links">
+            <ul>
+              <!-- First link -->
+              <li class="lg-home">
+                <a aria-label="home link" href="">
+                  <div class="home-icon">
+                    <i aria-hidden="true" class="fa-solid fa-house"></i>
+                  </div>
+                  <span>الصفحة الرئيسية</span>
+                </a>
+              </li>
+              <!-- Second link -->
+              <li class="tansactions-link-wrapper">
+                <a aria-label="home link" href="#">
+                  <div class="transaction-icon">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-arrow-right-arrow-left"
+                    ></i>
+                  </div>
+                  <span>المعاملات</span>
+                </a>
+              </li>
+              <!-- Thired link -->
+              <li class="badget-link-wrapper">
+                <a href="">
+                  <div class="badget-icon">
+                    <img
+                      aria-hidden="true"
+                      src="./images/icons/chart-pie-solid-full.png"
+                      alt="chart pia fiannace"
+                    />
+                  </div>
+                  <span>الميزانية</span>
+                </a>
+              </li>
+              <!-- Fourth link -->
+              <li class="saving-link-wrapper">
+                <a href="">
+                  <div class="saving-icon">
+                    <i aria-hidden="true" class="fa-solid fa-piggy-bank"></i>
+                  </div>
+                  <span>المدخرات</span>
+                </a>
+              </li>
+              <!-- Fifth link -->
+              <li class="bills-link-wrapper">
+                <a href="#">
+                  <div class="monthly-bills">
+                    <i
+                      aria-hidden="true"
+                      class="fa-solid fa-file-invoice-dollar"
+                    ></i>
+                  </div>
+                  <span>الفواتير الشهرية</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Row-3 -->
+          <div class="lg-navbar-actions">
+            <span>إجراءات سريعة</span>
+            <ul>
+              <li class="send-money-action">
+                <a aria-label="Send mony action" href="#">
+                  <div class="send-mony-icon">
+                    <i aria-hidden="true" class="fa-solid fa-paper-plane"></i>
+                  </div>
+                  <span>إرسال أموال</span>
+                </a>
+              </li>
+              <li class="add-money-action">
+                <a aria-label="Add entry action" href="#">
+                  <div class="add-mony-icon">
+                    <i aria-hidden="true" class="fa-solid fa-plus"></i>
+                  </div>
+                  <span> إضافة أموال </span>
+                </a>
+              </li>
+              <li class="pay-bills-action">
+                <a aria-label="Check receipt action" href="#">
+                  <div class="pay-bills-icon">
+                    <i class="fa-solid fa-receipt"></i>
+                  </div>
+                  <span>دفع فاتورة</span>
+                </a>
+              </li>
+              <li class="trading-action">
+                <a aria-label="Check statistics action" href="">
+                  <div class="trading-action-icon">
+                    <i aria-hidden="true" class="fa-solid fa-chart-line"></i>
+                  </div>
+                  <span>إستثمار</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </aside>
+
       <main class="main-container">
         <header class="header">
           <!-- Later I'm going to working on it -->
@@ -90,6 +270,80 @@ While CSS also has a direction property, the W3C and CSS Working Group recommend
             </div>
           </div>
         </header>
+        <!-- I will start doing these three cards using flexbox layout -->
+        <div class="finance-cards-container">
+          <!-- Card 1 -->
+          <div class="card income-card">
+            <h3>الرصيد الحالي</h3>
+            <p>8,450 جنية</p>
+            <div class="gross-box gross-up">
+              <i class="fa-solid fa-arrow-up"></i>
+              <span>+2.5% </span>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="card income-card">
+            <h3>الدخل</h3>
+            <p>15,000 جنية</p>
+            <div class="gross-box gross-up">
+              <i class="fa-solid fa-arrow-up"></i>
+              <span>+8.2% </span>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="card income-card">
+            <h3>المصروفات</h3>
+            <p>10,000 جنية</p>
+            <div class="gross-box gross-down">
+              <i class="fa-solid fa-arrow-down"></i>
+              <span>-1.2% </span>
+            </div>
+          </div>
+        </div>
+        <!-- I will start doing the below Widgets section using grid layout -->
+        <div class="finance-widgets-container">
+          <!-- 1 - First Widget shows the recent activities -->
+          <div class="widget-card recent-activities-card">
+            <h3 class="widget-title">الأنشطة الحديثة</h3>
+            <div class="recent-activites-wrapper">
+              <!-- First Activity -->
+              <div class="activity-box create-account">
+                <div class="activity-icon-wrapper">
+                  <i class="fa fa-user-plus" aria-hidden="true"></i>
+                </div>
+                <div class="activity-details">
+                  <h4 class="activity-title">إنشاء حساب توفير جديد</h4>
+                  <p class="activity-status">
+                    تم إنشاء حساب توفير بنك الأهلي بنجاح
+                  </p>
+                  <span class="activity-time">منذ ساعة واحدة </span>
+                </div>
+                <div class="activity-category-wrapper">
+                  <span class="activity-category">حساب</span>
+                </div>
+              </div>
+              <!-- Second Activity -->
+              <div class="activity-box add-new-card">
+                <div class="activity-icon-wrapper">
+                  <i class="fa-solid fa-credit-card"></i>
+                </div>
+                <div class="activity-details">
+                  <h4 class="activity-title">إضافة بطاقة جديدة</h4>
+                  <p class="activity-status">
+                    تمت إضافة بطاقة Visa الجديدة ****2847
+                  </p>
+                  <span class="activity-time"> منذ 3 ساعات </span>
+                </div>
+                <div class="activity-category-wrapper">
+                  <span class="activity-category">بطاقة</span>
+                </div>
+              </div>
+            </div>
+            <div class="show-all-activities">
+              <a href="#">عرض جميع الأنشطة (23)</a>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   </body>
