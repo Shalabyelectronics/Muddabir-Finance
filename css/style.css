@@ -31,7 +31,6 @@ Note: font wieght from 100 to 700
 
 
 
-
 */
 
 /* ========================================================
@@ -50,6 +49,7 @@ Note: font wieght from 100 to 700
   --color-black-500: #101828;
   --color-black-300: #4a5565;
   --color-black-200: #6a7282;
+  --color-gray-100: #364153;
   --color-white-100: #ffffff;
   --color-white-200: #f8fafc;
   --color-white-300: #fefeff;
@@ -198,6 +198,29 @@ a {
 }
 .fs-48 {
   font-size: 4.8rem;
+}
+
+/* Font wieght for our font IBM ARABIC it is from 100 to 700 */
+.fw-100 {
+  font-weight: 100;
+}
+.fw-200 {
+  font-weight: 200;
+}
+.fw-300 {
+  font-weight: 300;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
 }
 /* Line height */
 /* As I can't put dot between two number 🏃‍♂️‍➡️ I put o letter */
@@ -719,6 +742,154 @@ a {
   object-fit: cover;
 }
 
+/* ---> Fix the table width to be 100% from its parent and add some guidline border */
+.recent-transactions-wrapper {
+  background-color: lightslategray;
+}
+.recent-transaction-table {
+  min-width: 100%;
+  border-collapse: collapse;
+  border: 0.2rem solid black;
+}
+
+.recent-transaction-table td,
+.recent-transaction-table th {
+  border: 0.2rem solid black;
+  padding: 0.8rem 0.4rem;
+  font-size: 1.2rem;
+  text-align: right;
+  color: var(--color-gray-100);
+}
+
+.recent-transaction-table td {
+  font-weight: 600;
+}
+
+/* --->  prepar the info first column cell the below make the image side by side */
+.table-body .row .col-1 .transaction-by-info {
+  background-color: lightyellow;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ---> Styling the user image first of all */
+
+.transaction-by-info .transaction-by-image {
+  width: 4rem;
+  height: 4rem;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #000;
+}
+.transaction-by-info .transaction-by-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ---> I npticed not all contain an image some have icons so im going to creat spacific role for icons */
+.transaction-by-info .transaction-by-icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--bg-badge);
+}
+.transaction-by-info .transaction-by-icon i {
+  font-size: 1.2rem;
+  color: var(--font-color);
+}
+
+/* ---> Styling the user name and the transaction he did. */
+
+.transaction-by-info .transaction-by-detail p {
+  line-height: 1.2;
+}
+.transaction-by-info .transaction-by-detail span {
+  font-weight: 700;
+  color: var(--color-black-200);
+}
+
+/* I'm going to style a class called category it will be for all same color then I'm going to change for spacifig by using bootstarp techniqe that we learned last session*/
+.category-badge {
+  padding: 0.2rem 1rem;
+  width: fit-content;
+  background-color: var(--bg-badge);
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 2rem;
+}
+.category-badge > .badge-icone i,
+.category-badge > .badge-type {
+  color: var(--font-color);
+  font-size: inherit;
+  font-weight: inherit;
+}
+/* Now I'm going to add a badge type for each I have  */
+.income-badge {
+  --bg-badge: #dbfce7;
+  --font-color: #008236;
+}
+.food-badge {
+  --bg-badge: #ffedd4;
+  --font-color: #9f2d00;
+}
+.shopping-badge {
+  --bg-badge: #dbeafe;
+  --font-color: #193cb8;
+}
+.installments-badge {
+  --bg-badge: #f3e8ff;
+  --font-color: #6e11b0;
+}
+.transportation-badge {
+  --bg-badge: #ffe2e2;
+  --font-color: #9f0712;
+}
+.entertainment-badge {
+  --bg-badge: #e0e7ff;
+  --font-color: #372aac;
+}
+.health-badge {
+  --bg-badge: #cefafe;
+  --font-color: #005f78;
+}
+
+/* ---> Now we will style a status badge that located ib column 4 we have two states we can add later */
+
+/* General status badge style */
+.status-badge {
+  padding: 0.2rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: var(--bg-badge);
+  color: var(--font-color);
+}
+
+/* Status */
+.completed-status {
+  --bg-badge: #dbfce7;
+  --font-color: #008236;
+}
+.pending-status {
+  --bg-badge: #fef9c2;
+  --font-color: #894b00;
+}
+
+/*---> Now I'm going to add to mony status as + positive that we got a mony and - negative we spend money  */
+.col.get-money {
+  color: var(--color-green-600);
+}
+.col.spend-mony {
+  color: var(--color-red-300);
+}
+/* Styleing  */
 /*  */
 /*  */
 /* ============================================================================
@@ -888,38 +1059,6 @@ Extra extra large	xxl	≥1400px
     flex: 1 1 0%;
   }
 }
-
-/* --->  prepar the info first column cell the below make the image side by side */
-.table-body .row-1 .col-1 .transaction-by-info {
-  background-color: lightyellow;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-/* ---> Styling the user image first of all */
-
-.transaction-by-info .transaction-by-image {
-  width: 3.125rem;
-  height: 3.125rem;
-  flex-shrink: 0;
-  overflow: hidden;
-  border-radius: 50%;
-  background-color: #000;
-}
-.transaction-by-info .transaction-by-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* ---> Styling the user name and the transaction he did. */
-
-.transaction-by-info .transaction-by-detail p {
-  line-height: 1.2;
-}
-
 @media screen and (min-width: 1024px) {
   /* ============================================================================
     3. Finance cards Section ---> User Over views cards 👾🎮🎛️

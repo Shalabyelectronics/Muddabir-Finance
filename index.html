@@ -354,26 +354,6 @@ While CSS also has a direction property, the W3C and CSS Working Group recommend
             </div>
 
             <div class="recent-transactions-wrapper">
-              <!-- <table class="recent-transactions-table" >
-                <thead>
-                  <tr>
-                    <th>المعاملة</th>
-                    <th>الفئة</th>
-                    <th>التاريخ</th>
-                    <th>الحالة</th>
-                    <th>المبلغ</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table> -->
               <table class="recent-transaction-table">
                 <thead class="table-header">
                   <tr>
@@ -385,8 +365,9 @@ While CSS also has a direction property, the W3C and CSS Working Group recommend
                   </tr>
                 </thead>
                 <tbody class="table-body">
-                  <tr class="row-1">
-                    <td class="col-1">
+                  <!-- Row 1 -->
+                  <tr class="row row-1">
+                    <td class="col col-1">
                       <div class="transaction-by-info">
                         <div class="transaction-by-image">
                           <img
@@ -400,66 +381,241 @@ While CSS also has a direction property, the W3C and CSS Working Group recommend
                         </div>
                       </div>
                     </td>
-                    <td>دخل</td>
-                    <td>١٤ أكتوبر ٢٠٢٥</td>
-                    <td>مكتمل</td>
-                    <td>+350 جنية</td>
+                    <td class="col col-2">
+                      <div class="category-badge income-badge">
+                        <span class="badge-icone">
+                          <i class="fa-solid fa-arrow-down"></i>
+                        </span>
+                        <span class="badge-type">دخل</span>
+                      </div>
+                    </td>
+                    <td class="col col-3">١٤ أكتوبر ٢٠٢٥</td>
+                    <td class="col col-4">
+                      <span class="status-badge completed-status">مكتمل</span>
+                    </td>
+                    <td class="col col-5 get-money">+350 جنية</td>
                   </tr>
-                  <tr>
-                    <td>مطعم Meat moot<br />دفع مطعم</td>
-                    <td>طعام</td>
-                    <td>14 أكتوبر، 2025</td>
-                    <td>مكتمل</td>
-                    <td>-2200 جنية</td>
+                  <!-- Row 2 -->
+                  <tr class="row row-2">
+                    <td class="col col-1">
+                      <div class="transaction-by-info">
+                        <div class="transaction-by-icon food-badge">
+                          <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <div class="transaction-by-detail">
+                          <p>مطعم Meat moot</p>
+                          <span>دفع مطعم</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="col col-2">
+                      <div class="category-badge food-badge">
+                        <span class="badge-icone">
+                          <i class="fa-solid fa-utensils"></i>
+                        </span>
+                        <span class="badge-type">طعام</span>
+                      </div>
+                    </td>
+                    <td class="col col-3">14 أكتوبر، 2025</td>
+                    <td class="col col-4">
+                      <span class="status-badge completed-status">مكتمل</span>
+                    </td>
+                    <td class="col col-5">-2200 جنية</td>
                   </tr>
-                  <tr>
-                    <td>مشتريات Amazon<br />تسوق إلكتروني</td>
-                    <td>تسوق</td>
-                    <td>13 أكتوبر، 2025</td>
-                    <td>مكتمل</td>
-                    <td>-1250 جنية</td>
+                  <!-- Row 3 -->
+                  <tr class="row row-3">
+                    <td class="col col-1">
+                      <div class="transaction-by-info">
+                        <div class="transaction-by-icon shopping-badge">
+                          <i class="fa-solid fa-shopping-cart"></i>
+                        </div>
+                        <div class="transaction-by-detail">
+                          <p>مشتريات Amazon</p>
+                          <span>تسوق إلكتروني</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="col col-2">
+                      <div class="category-badge shopping-badge">
+                        <span class="badge-icone">
+                          <i class="fa-solid fa-cart-shopping"></i>
+                        </span>
+                        <span class="badge-type">تسوق</span>
+                      </div>
+                    </td>
+                    <td class="col col-3">13 أكتوبر، 2025</td>
+                    <td class="col col-4">
+                      <span class="status-badge completed-status">مكتمل</span>
+                    </td>
+                    <td class="col col-5">-1250 جنية</td>
                   </tr>
-                  <tr>
-                    <td>عمر المهدي<br />دفع فاتورة مقسمة</td>
-                    <td>فاتورة مقسمة</td>
-                    <td>13 أكتوبر، 2025</td>
-                    <td>مكتمل</td>
-                    <td>-1400 جنية</td>
+                  <!-- Row 4 -->
+                  <tr class="row row-4">
+                    <td class="col col-1">
+                      <div class="transaction-by-info">
+                        <div class="transaction-by-image">
+                          <img
+                            src="./images/avatar-1.jpg"
+                            alt="صورة عمر المهدي المنشكح عميل"
+                          />
+                        </div>
+                        <div class="transaction-by-detail">
+                          <p>عمر المهدي</p>
+                          <span>دفع فاتورة مقسمة</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="col col-2">
+                      <div class="category-badge installments-badge">
+                        <span class="badge-icone">
+                          <i class="fa-solid fa-users"></i>
+                        </span>
+                        <span class="badge-type">فاتورة مقسمة</span>
+                      </div>
+                    </td>
+                    <td class="col col-3">13 أكتوبر، 2025</td>
+                    <td class="col col-4">
+                      <span class="status-badge completed-status">مكتمل</span>
+                    </td>
+                    <td class="col col-5">-1400 جنية</td>
                   </tr>
-                  <tr>
-                    <td>محمد عوض<br />دفع عمل حر</td>
-                    <td>عمل</td>
-                    <td>12 أكتوبر، 2025</td>
-                    <td>مكتمل</td>
-                    <td>+2500 جنية</td>
+                  <!-- Row 5 -->
+                  <tr class="row row-5">
+                    <td class="col col-1">
+                      <div class="transaction-by-info">
+                        <div class="transaction-by-image">
+                          <img
+                            src="./images/avatar-3.jpg"
+                            alt="صورة الحج محمد عوض عميل"
+                          />
+                        </div>
+                        <div class="transaction-by-detail">
+                          <p>محمد عوض</p>
+                          <span>دفع عمل حر</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="col col-2">
+                      <div class="category-badge income-badge">
+                        <span class="badge-icone">
+                          <i class="fa-solid fa-briefcase"></i>
+                        </span>
+                        <span class="badge-type">عمل</span>
+                      </div>
+                    </td>
+                    <td class="col col-3">12 أكتوبر، 2025</td>
+                    <td class="col col-4">
+                      <span class="status-badge completed-status">مكتمل</span>
+                    </td>
+                    <td class="col col-5 get-money">+2500 جنية</td>
                   </tr>
-                  <tr>
-                    <td>محطة وقود Shell<br />شراء وقود</td>
-                    <td>مواصلات</td>
-                    <td>12 أكتوبر، 2025</td>
-                    <td>معلق</td>
-                    <td>-700 جنية</td>
+                  <!-- Row 6 -->
+                  <tr class="row row-6">
+                    <td class="col col-1">
+                      <div class="transaction-by-info">
+                        <div class="transaction-by-icon transportation-badge">
+                          <i class="fa-solid fa-gas-pump"></i>
+                        </div>
+                        <div class="transaction-by-detail">
+                          <p>محطة وقود Shell</p>
+                          <span>شراء وقود</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="col col-2">
+                      <div class="category-badge transportation-badge">
+                        <span class="badge-icone">
+                          <i class="fa-solid fa-car"></i>
+                        </span>
+                        <span class="badge-type">مواصلات</span>
+                      </div>
+                    </td>
+                    <td class="col col-3">12 أكتوبر، 2025</td>
+                    <td class="col col-4">
+                      <span class="status-badge pending-status">معلق</span>
+                    </td>
+                    <td class="col col-5">-700 جنية</td>
                   </tr>
-                  <tr>
-                    <td>اشتراك Netflix<br />اشتراك شهري</td>
-                    <td>ترفيه</td>
-                    <td>11 أكتوبر، 2025</td>
-                    <td>مكتمل</td>
-                    <td>-780 جنية</td>
+                  <!-- Row 7 -->
+                  <tr class="row row-7">
+                    <td class="col col-1">
+                      <div class="transaction-by-info">
+                        <div class="transaction-by-icon entertainment-badge">
+                          <i class="fa-solid fa-film"></i>
+                        </div>
+                        <div class="transaction-by-detail">
+                          <p>اشتراك Netflix</p>
+                          <span>اشتراك شهري</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="col col-2">
+                      <div class="category-badge entertainment-badge">
+                        <span class="badge-icone">
+                          <i class="fa-solid fa-tv"></i>
+                        </span>
+                        <span class="badge-type">ترفيه</span>
+                      </div>
+                    </td>
+                    <td class="col col-3">11 أكتوبر، 2025</td>
+                    <td class="col col-4">
+                      <span class="status-badge completed-status">مكتمل</span>
+                    </td>
+                    <td class="col col-5">-780 جنية</td>
                   </tr>
-                  <tr>
-                    <td>نادي FitLife<br />عضوية شهرية</td>
-                    <td>صحة</td>
-                    <td>10 أكتوبر، 2025</td>
-                    <td>مكتمل</td>
-                    <td>-500 جنية</td>
+                  <!-- Row 8 -->
+                  <tr class="row row-8">
+                    <td class="col col-1">
+                      <div class="transaction-by-info">
+                        <div class="transaction-by-icon health-badge">
+                          <i class="fa-solid fa-dumbbell"></i>
+                        </div>
+                        <div class="transaction-by-detail">
+                          <p>نادي FitLife</p>
+                          <span>عضوية شهرية</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="col col-2">
+                      <div class="category-badge health-badge">
+                        <span class="badge-icone">
+                          <i class="fa-solid fa-heart-pulse"></i>
+                        </span>
+                        <span class="badge-type">صحة</span>
+                      </div>
+                    </td>
+                    <td class="col col-3">10 أكتوبر، 2025</td>
+                    <td class="col col-4">
+                      <span class="status-badge completed-status">مكتمل</span>
+                    </td>
+                    <td class="col col-5">-500 جنية</td>
                   </tr>
-                  <tr>
-                    <td>كورس Jonas<br />دورة تدريبية</td>
-                    <td>تعليم</td>
-                    <td>9 أكتوبر، 2025</td>
-                    <td>مكتمل</td>
-                    <td>-250 جنية</td>
+                  <!-- Row 9 -->
+                  <tr class="row row-9">
+                    <td class="col col-1">
+                      <div class="transaction-by-info">
+                        <div class="transaction-by-icon income-badge">
+                          <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="transaction-by-detail">
+                          <p>كورس Jonas</p>
+                          <span>دورة تدريبية</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="col col-2">
+                      <div class="category-badge income-badge">
+                        <span class="badge-icone">
+                          <i class="fa-solid fa-book"></i>
+                        </span>
+                        <span class="badge-type">تعليم</span>
+                      </div>
+                    </td>
+                    <td class="col col-3">9 أكتوبر، 2025</td>
+                    <td class="col col-4">
+                      <span class="status-badge completed-status">مكتمل</span>
+                    </td>
+                    <td class="col col-5">-250 جنية</td>
                   </tr>
                 </tbody>
               </table>
