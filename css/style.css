@@ -541,6 +541,9 @@ a {
     4. Widgets Section ---> User Over views cards 👾🎮🎛️
     ===========================================================================
 */
+
+/* ---|||||||1- ♠️ Recent Activities Widget ||||||||--- */
+
 .finance-widgets-container {
   background-color: #4a5565;
 }
@@ -610,7 +613,7 @@ a {
 .recent-activities-card .show-all-activities {
   /* background-color: lightpink; */
   padding-top: calc(var(--spacing) * 4);
-  border-top: 0.1rem solid   var(--color-black-200);
+  border-top: 0.1rem solid var(--color-black-200);
 }
 
 /* ---->Change link width */
@@ -666,6 +669,57 @@ a {
   color: var(--color-green-400);
 }
 
+/* ---|||||||2- ♥️ Recent transactions Widget ||||||||--- */
+
+/* --->  Styling the card container */
+
+.recent-transactions-card {
+  background-color: lightsalmon;
+}
+
+/* Header widget contain the widget title and show all link */
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.recent-transactions-card .widget-title {
+  background-color: lightslategray;
+}
+
+.recent-transactions-card .show-all-transaction-link {
+  background-color: lightpink;
+}
+
+/* --->  Styling the Recent transactions table */
+
+.recent-transaction-table {
+  background-color: lightcyan;
+}
+
+/* ---> Styling the user image first of all */
+.table-body .row-1 .col-1 .transaction-by-info {
+  background-color: lightyellow;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.transaction-by-info .transaction-by-image {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #000;
+}
+.transaction-by-info .transaction-by-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/*  */
 /*  */
 /* ============================================================================
     Media Quary 👾🎮🎛️
@@ -834,6 +888,38 @@ Extra extra large	xxl	≥1400px
     flex: 1 1 0%;
   }
 }
+
+/* --->  prepar the info first column cell the below make the image side by side */
+.table-body .row-1 .col-1 .transaction-by-info {
+  background-color: lightyellow;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ---> Styling the user image first of all */
+
+.transaction-by-info .transaction-by-image {
+  width: 3.125rem;
+  height: 3.125rem;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #000;
+}
+.transaction-by-info .transaction-by-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ---> Styling the user name and the transaction he did. */
+
+.transaction-by-info .transaction-by-detail p {
+  line-height: 1.2;
+}
+
 @media screen and (min-width: 1024px) {
   /* ============================================================================
     3. Finance cards Section ---> User Over views cards 👾🎮🎛️
