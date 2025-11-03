@@ -1202,7 +1202,6 @@ a {
 
 /* ---|||||||5- 📈  Income versus expenses Widget ||||||||--- */
 
-
 /* Row 1 contains the chart info box*/
 .income-vs-expenses-info {
   display: flex;
@@ -1285,6 +1284,81 @@ a {
   --bg-color: var(--color-red-400);
   --bar-height: 7.5rem;
 }
+
+/* ---|||||||6- 📈  Account Summary Widget ||||||||--- */
+
+.account-summary-wrapper > div:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+.account-summary-record {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem;
+  background-color: var(--color-white-400);
+  border: 0.1rem solid var(--color-gray-100);
+  border-radius: 0.8rem;
+}
+
+.account-summary-record .account-record-info {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+}
+/* ---> Style general account summary record Icon */
+.account-summary-record .account-record-info .record-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.8rem;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.account-summary-record .account-record-info .record-icon i {
+  color: var(--font-color);
+}
+
+/* Specail Icon style */
+.current-account-icon {
+  --bg-color: var(--color-blue-200);
+  --font-color: var(--color-blue-500);
+}
+.savings-account-icon {
+  --bg-color: var(--color-green-200);
+  --font-color: var(--color-green-400);
+}
+.cridet-card-icon {
+  --bg-color: var(--color-purple-100);
+  --font-color: var(--color-purple-500);
+}
+
+/* ---> Styling general account details */
+
+.account-summary-record .account-record-info .record-details h4 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.account-summary-record .account-record-info .record-details span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-gray-200);
+  line-height: 0.5;
+}
+
+/* Styling Account summary total money*/
+.account-summary-record .account-record-money .record-status {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--font-color, #101828);
+}
+
+/* special style */
+.warning {
+  --font-color: var(--color-red-400);
+}
+
 /* ============================================================================
     Media Quary 👾🎮🎛️
     ===========================================================================
