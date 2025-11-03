@@ -1200,6 +1200,91 @@ a {
   --font-color: var(--color-brown-500);
 }
 
+/* ---|||||||5- 📈  Income versus expenses Widget ||||||||--- */
+
+
+/* Row 1 contains the chart info box*/
+.income-vs-expenses-info {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+.income-vs-expenses-info span {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-black-300);
+}
+.income-vs-expenses-info span::before {
+  position: absolute;
+  content: "";
+  width: 1.2rem;
+  height: 1.2rem;
+  right: -2rem;
+  bottom: -15%;
+  border-radius: 0.2rem;
+  border: 0.01rem solid var(--color-gray-200);
+  transform: translateY(-50%);
+  background-color: var(--bg-color);
+}
+
+/* Special icon box info  */
+.income {
+  --bg-color: var(--color-green-400);
+}
+.expenses {
+  --bg-color: var(--color-red-400);
+}
+
+/* Row 2 contains the income versus expenses column chart*/
+.income-vs-expenses-chart-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.income-vs-expenses-chart-wrapper .col-chart-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.col-chart-wrapper .col-name {
+  text-align: center;
+}
+.col-chart-wrapper .col-name span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-black-300);
+}
+/* Style column bar chart */
+.col-chart-wrapper .col-bars-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+}
+.col-chart-wrapper .col-bars-wrapper .bar {
+  position: relative;
+  width: 1.5rem;
+  height: 20rem;
+}
+.col-chart-wrapper .col-bars-wrapper .bar::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 0;
+  width: 1.5rem;
+  height: var(--bar-height);
+  border-radius: 0.2rem 0.2rem 0 0;
+  background-color: var(--bg-color);
+}
+/* Special bar color */
+.income-bar {
+  --bg-color: var(--color-green-400);
+  --bar-height: 15rem;
+}
+.expenses-bar {
+  --bg-color: var(--color-red-400);
+  --bar-height: 7.5rem;
+}
 /* ============================================================================
     Media Quary 👾🎮🎛️
     ===========================================================================
