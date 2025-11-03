@@ -227,6 +227,7 @@ While CSS also has a direction property, the W3C and CSS Working Group recommend
       </aside>
 
       <main class="main-container">
+        <!-- ||||| HEADER START HERE ||||| -->
         <header class="header">
           <!-- Later I'm going to working on it -->
           <!-- <div class="overlay"></div> -->
@@ -269,6 +270,8 @@ While CSS also has a direction property, the W3C and CSS Working Group recommend
             </div>
           </div>
         </header>
+        <!-- ||||| HEADER END HERE ||||| -->
+        <!-- ||||OVERVIEW DASHBOARD CARDS START HERE|||| -->
         <!-- I will start doing these three cards using flexbox layout -->
         <div class="finance-cards-container">
           <!-- Card 1 -->
@@ -299,8 +302,11 @@ While CSS also has a direction property, the W3C and CSS Working Group recommend
             </div>
           </div>
         </div>
+        <!-- ||||OVERVIEW DASHBOARD CARDS END HERE|||| -->
+        <!-- ||||DASHBOARD WIDGETS CARDS START HERE|||| -->
         <!-- I will start doing the below Widgets section using grid layout -->
         <div class="finance-widgets-container">
+          <!-- ----|RECENT ACTIVITIES WEDGET START HERE|----- -->
           <!-- 1 - First Widget shows the recent activities -->
           <div class="widget-card recent-activities-card">
             <h3 class="widget-title">الأنشطة الحديثة</h3>
@@ -342,7 +348,8 @@ While CSS also has a direction property, the W3C and CSS Working Group recommend
               <a href="#">عرض جميع الأنشطة (23)</a>
             </div>
           </div>
-
+          <!-- ----|RECENT ACTIVITIES WEDGET END HERE|----- -->
+          <!-- ----|RECENT TRANSACTIN WEDGET START HERE|----- -->
           <!-- 2 - Second Widget shows the last Recent transactions -->
           <div class="widget-card recent-transactions-card">
             <div class="widget-header">
@@ -621,7 +628,8 @@ While CSS also has a direction property, the W3C and CSS Working Group recommend
               </table>
             </div>
           </div>
-
+          <!-- ----|RECENT TRANSACTIN WEDGET END HERE|----- -->
+          <!-- ----|MONTHLY BILLS WEDGET START HERE|----- -->
           <!-- 3 - Thired Widget shows the monthly bills -->
           <div class="widget-card monthly-bills-card">
             <div class="widget-header">
@@ -687,6 +695,181 @@ While CSS also has a direction property, the W3C and CSS Working Group recommend
               </div>
             </div>
           </div>
+          <!-- ----|MONTHLY BILLS WEDGET END HERE|----- -->
+          <!-- ----|BADGET OVERVIEW WEDGET START HERE|----- -->
+          <!-- 4- Fourth widget Badget over view -->
+          <div class="widget-card badget-overview-card">
+            <!-- Widget Header -->
+            <div class="widget-header">
+              <h3 class="widget-title">نظرة عامة على الميزانية</h3>
+              <a class="widgt-show-all show-badget-overview-link" href="#">
+                <span>التفاصيل</span>
+                <i class="fa-solid fa-chevron-left"></i>
+              </a>
+            </div>
+            <!-- Main Widget Content wrapper -->
+            <div class="badget-overview-wrapper main-overview-wrapper">
+              <!-- Row 1 -->
+              <div class="badget-overview-details">
+                <div class="overall-badget">
+                  <h4>إجمالي الميزانية</h4>
+                  <span>10000 جنية </span>
+                </div>
+                <div class="remaining-badget">
+                  <p>المتبقي</p>
+                  <span>1750 جنية </span>
+                </div>
+              </div>
+              <!-- Row 2 -->
+              <div class="badget-overview-chart">
+                <!-- Row 1 -->
+                <div class="overview-chart-details">
+                  <span>المستخدم: 8250 جنية </span>
+                  <span>82.5% </span>
+                </div>
+                <!-- Row 2 -->
+                <div class="overview-chart-shap main-chart-shap">
+                  <div class="loading-chart"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Secondary widget content wrapper that contain spacific badget overview for each category -->
+            <div class="badget-overviews-categories">
+              <!-- First category overview : Entertainment Category -->
+              <div class="category-overviews-wrapper entertainment-wrapper">
+                <!-- Row 1 : Entertainment Category details-->
+                <div class="category-overview-details">
+                  <!-- rs mean Right Side -->
+                  <div class="category-overview-rs">
+                    <!-- Rs category icon -->
+                    <div class="category-overview-icon entertainment-icon">
+                      <i class="fa-solid fa-film"></i>
+                    </div>
+                    <!-- Rs category Details -->
+                    <div class="category-overview-detail">
+                      <h5 class="category-title">ترفيه</h5>
+                      <span class="category-total-badget">
+                        الميزانية: 1500 جنية
+                      </span>
+                    </div>
+                  </div>
+                  <!-- ls mean Left Side -->
+                  <div class="category-overview-ls">
+                    <p>750 جنية</p>
+                    <div
+                      class="category-remaining-wrapper half-badget-remaining"
+                    >
+                      <span>متبقي 50% </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Row 2 : Entertainment Category includes loading bar chart-->
+                <div class="overview-chart-shap entertainment-chart-shap">
+                  <div class="loading-chart"></div>
+                </div>
+              </div>
+              <!-- Second category overview : Bills Category -->
+              <div class="category-overviews-wrapper bills-wrapper">
+                <!-- Row 1 : Entertainment Category details-->
+                <div class="category-overview-details">
+                  <!-- rs mean Right Side -->
+                  <div class="category-overview-rs">
+                    <!-- Rs category icon -->
+                    <div class="category-overview-icon bills-icon">
+                      <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                    <!-- Rs category Details -->
+                    <div class="category-overview-detail">
+                      <h5 class="category-title">فواتير</h5>
+                      <span class="category-total-badget">
+                        الميزانية: 2000 جنية
+                      </span>
+                    </div>
+                  </div>
+                  <!-- ls mean Left Side -->
+                  <div class="category-overview-ls">
+                    <p>2000 جنية</p>
+                    <div
+                      class="category-remaining-wrapper zero-badget-remaining"
+                    >
+                      <span>مستخدم 100% </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Row 2 : Entertainment Category includes loading bar chart-->
+                <div class="overview-chart-shap bills-chart-shap">
+                  <div class="loading-chart"></div>
+                </div>
+              </div>
+              <!-- Thired category overview : Personal care Category -->
+              <div class="category-overviews-wrapper personal-care-wrapper">
+                <!-- Row 1 : Entertainment Category details-->
+                <div class="category-overview-details">
+                  <!-- rs mean Right Side -->
+                  <div class="category-overview-rs">
+                    <!-- Rs category icon -->
+                    <div class="category-overview-icon personal-care-icon">
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <!-- Rs category Details -->
+                    <div class="category-overview-detail">
+                      <h5 class="category-title">العناية الشخصية</h5>
+                      <span class="category-total-badget">
+                        الميزانية: 1500 جنية
+                      </span>
+                    </div>
+                  </div>
+                  <!-- ls mean Left Side -->
+                  <div class="category-overview-ls">
+                    <p>1200 جنية</p>
+                    <div
+                      class="category-remaining-wrapper warning-badget-remaining"
+                    >
+                      <span>متبقي 20% </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Row 2 : Entertainment Category includes loading bar chart-->
+                <div class="overview-chart-shap personal-care-chart-shap">
+                  <div class="loading-chart"></div>
+                </div>
+              </div>
+              <!-- Fourth category overview : Home equpment Category -->
+              <div class="category-overviews-wrapper home-equpment-wrapper">
+                <!-- Row 1 : Home equpment Category details-->
+                <div class="category-overview-details">
+                  <!-- rs mean Right Side -->
+                  <div class="category-overview-rs">
+                    <!-- Rs category icon -->
+                    <div class="category-overview-icon home-equpment-icon">
+                      <i class="fa-solid fa-film"></i>
+                    </div>
+                    <!-- Rs category Details -->
+                    <div class="category-overview-detail">
+                      <h5 class="category-title">مستلزمات المنزل</h5>
+                      <span class="category-total-badget">
+                        الميزانية: 5000 جنية
+                      </span>
+                    </div>
+                  </div>
+                  <!-- ls mean Left Side -->
+                  <div class="category-overview-ls">
+                    <p>4300 جنية</p>
+                    <div
+                      class="category-remaining-wrapper warning-badget-remaining"
+                    >
+                      <span>متبقي 14% </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Row 2 : Home equpment Category includes loading bar chart-->
+                <div class="overview-chart-shap home-equpment-chart-shap">
+                  <div class="loading-chart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ----|BADGET OVERVIEW WEDGET END HERE|----- -->
         </div>
       </main>
     </div>

@@ -40,6 +40,7 @@ Note: font wieght from 100 to 700
 
 :root {
   /* Colors 100 mean light color 500 mean dark color*/
+  --color-blue-800: #1c398e;
   --color-blue-600: #193cb8;
   --color-blue-500: #2854f4;
   --color-blue-400: #3b82f6;
@@ -49,7 +50,8 @@ Note: font wieght from 100 to 700
   --color-black-500: #101828;
   --color-black-300: #4a5565;
   --color-black-200: #6a7282;
-  --color-gray-100: #364153;
+  --color-gray-200: #364153;
+  --color-gray-100: #e5e7eb;
   --color-white-100: #ffffff;
   --color-white-200: #f8fafc;
   --color-white-300: #fefeff;
@@ -58,6 +60,7 @@ Note: font wieght from 100 to 700
   --color-green-100: #f0fdf4;
   --color-green-200: #dbfce7;
   --color-green-300: #65df95;
+  --color-green-350: #00c951;
   --color-green-400: #00a63e;
   --color-green-500: #005f78;
   --color-green-600: #008236;
@@ -73,6 +76,7 @@ Note: font wieght from 100 to 700
   --color-cyan-100: #cefafe;
   --color-orange-500: #ba4d00;
   --color-pink-100: #fce7f3;
+  --color-pink-200: #fee2e2;
   --color-pink-500: #e60076;
   /* Spacing Unit */
   --spacing: 0.4rem;
@@ -939,7 +943,7 @@ a {
   background-color: var(--color-white-500);
   border-radius: 0.8rem;
   padding: 1.2rem;
-  border: 0.1rem solid var(--color-black-200);
+  border: 0.1rem solid var(--color-gray-100);
   flex-grow: 1;
 }
 .bills-details-wrapper .row {
@@ -999,6 +1003,201 @@ a {
 .entertainment-icon {
   --bg-badge: #ffe2e2;
   --font-color: #9f0712;
+}
+
+/* ---|||||||4- 📈 Badget Overview Widget ||||||||--- */
+.badget-overview-wrapper.main-overview-wrapper {
+  margin-bottom: 2.4rem;
+}
+.badget-overview-card .badget-overview-wrapper {
+  padding: 1.6rem;
+  background-color: var(--color-blue-100);
+  border: 0.1rem solid var(--color-blue-300);
+  border-radius: 0.8rem;
+}
+
+/* Row 1 inside main-overview-wrapper*/
+.main-overview-wrapper .badget-overview-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.badget-overview-details .overall-badget h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-blue-500);
+}
+.badget-overview-details .overall-badget span {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-blue-800);
+}
+.badget-overview-details .remaining-badget p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-gray-200);
+}
+.badget-overview-details .remaining-badget span {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-green-400);
+}
+/* Row 2  inside main-overview-wrapper*/
+.badget-overview-chart .overview-chart-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+.badget-overview-chart .overview-chart-details span {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-black-300);
+}
+
+/* ---> Styling the loading bar chart */
+/* General style first because I'm going to use it with othere cards */
+
+.overview-chart-shap .loading-chart {
+  position: relative;
+  height: 0.8rem;
+  background-color: var(--color-gray-100);
+  border-radius: 2rem;
+}
+.overview-chart-shap .loading-chart::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: var(--laoding-bar-value);
+  height: 0.8rem;
+  background-color: var(--bg-color);
+  border-radius: 2rem;
+}
+
+/* Spicail color for each loading bar chart */
+.main-chart-shap {
+  --bg-color: var(--color-blue-400);
+  --laoding-bar-value: 82.5%;
+}
+.entertainment-chart-shap {
+  --bg-color: var(--color-red-300);
+  --laoding-bar-value: 50%;
+}
+.bills-chart-shap {
+  --bg-color: var(--color-red-500);
+  --laoding-bar-value: 100%;
+}
+.personal-care-chart-shap {
+  --bg-color: var(--color-pink-500);
+  --laoding-bar-value: 80%;
+}
+.home-equpment-chart-shap {
+  --bg-color: var(--color-green-350);
+  --laoding-bar-value: 86%;
+}
+
+/* ---> Categories overview badget ( General rule) */
+/* The Wrapper */
+.badget-overviews-categories > div:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+.badget-overviews-categories .category-overviews-wrapper {
+  padding: 1.6rem;
+  border-radius: 0.8rem;
+  background-color: var(--color-white-500);
+  border: 0.1rem solid var(--color-gray-100);
+  transform: translate(0, 0);
+  box-shadow: 0 0 transparent;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.badget-overviews-categories .category-overviews-wrapper:hover {
+  transform: translate(0, -0.1rem);
+  box-shadow: 0 0.3rem 0.5rem var(--color-black-200);
+}
+/*Row 1 contains category-overview-details*/
+.category-overview-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+/* Right Side Wrapper*/
+.category-overview-details .category-overview-rs {
+  display: flex;
+  gap: 1rem;
+}
+/* Right Side Icon */
+.category-overview-rs .category-overview-icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.8rem;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+/* Right Side details */
+.category-overview-rs .category-overview-detail .category-title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.category-overview-rs .category-overview-detail .category-total-badget {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-black-200);
+}
+
+/* Left Side details */
+.category-overview-ls p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+.category-overview-ls .category-remaining-wrapper {
+  padding: 0.2rem 0.8rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+}
+.category-overview-ls .category-remaining-wrapper span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--font-color);
+}
+/* Spicail Icone Style */
+.entertainment-icon {
+  --bg-color: #ffedd4;
+  --font-color: var(--color-red-300);
+}
+.bills-icon {
+  --bg-color: var(--color-pink-200);
+  --font-color: var(--color-red-300);
+}
+.personal-care-icon {
+  --bg-color: var(--color-pink-100);
+  --font-color: var(--color-pink-500);
+}
+.home-equpment-icon {
+  --bg-color: var(--color-green-200);
+  --font-color: var(--color-green-400);
+}
+/* Spicail remaining badge */
+.half-badget-remaining {
+  --bg-color: #dbfce7;
+  --font-color: #008236;
+}
+.zero-badget-remaining {
+  --bg-color: var(--color-pink-200);
+  --font-color: var(--color-red-500);
+}
+.warning-badget-remaining {
+  --bg-color: var(--color-yellow-100);
+  --font-color: var(--color-brown-500);
 }
 
 /* ============================================================================
