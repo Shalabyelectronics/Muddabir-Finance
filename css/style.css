@@ -54,6 +54,7 @@ Note: font wieght from 100 to 700
   --color-white-200: #f8fafc;
   --color-white-300: #fefeff;
   --color-white-400: #f3f4f6;
+  --color-white-500: #f9fafb;
   --color-green-100: #f0fdf4;
   --color-green-200: #dbfce7;
   --color-green-300: #65df95;
@@ -582,6 +583,29 @@ a {
   font-weight: 600;
   margin-bottom: calc(var(--spacing) * 6);
 }
+/* ---> style Show more link */
+
+.widget-card .widgt-show-all:visited,
+.widget-card .widgt-show-all:visited {
+  color: var(--color-black-300);
+}
+.widget-card .widgt-show-all > span,
+.widget-card .widgt-show-all > i {
+  color: var(--color-black-300);
+  transition: color 0.2s;
+}
+
+.widget-card .widgt-show-all > span {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.widget-card .widgt-show-all:hover > span {
+  color: var(--color-black-500);
+}
+.widget-card .widgt-show-all:hover > i {
+  color: var(--color-black-500);
+}
 
 .recent-activites-wrapper {
   margin-bottom: calc(var(--spacing) * 4);
@@ -889,9 +913,94 @@ a {
 .col.spend-mony {
   color: var(--color-red-300);
 }
-/* Styleing  */
-/*  */
-/*  */
+
+/* ---|||||||3- ♦️ Monthly bills Widget ||||||||--- */
+
+.monthly-bills-overview {
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+.monthly-bills-overview .total-bills-number {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.monthly-bills-overview .total-bills-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-black-200);
+}
+.bill-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white-500);
+  border-radius: 0.8rem;
+  padding: 1.2rem;
+  border: 0.1rem solid var(--color-black-200);
+  flex-grow: 1;
+}
+.bills-details-wrapper .row {
+  display: flex;
+
+  justify-content: center;
+  gap: 1rem;
+}
+.bills-details-wrapper .row-1 {
+  margin-bottom: 1rem;
+}
+/* ---> start with bill card general rule */
+.bill-card .bill-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.8rem;
+  background-color: var(--bg-badge);
+}
+.bill-card .bill-icon i {
+  font-size: 1.6rem;
+  color: var(--font-color);
+}
+.bill-card .bill-title,
+.bill-card .bill-due {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-black-200);
+}
+
+.bill-card .bill-total {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* special style for each icon */
+.bill-due.due-warning {
+  color: var(--color-red-300);
+}
+.bill-due.due-safe {
+  color: var(--color-green-600);
+}
+.internet-icon {
+  --bg-badge: #dbeafe;
+  --font-color: #193cb8;
+}
+.electricity-icon {
+  --bg-badge: #fef9c2;
+  --font-color: #894b00;
+}
+.phone-icon {
+  --bg-badge: #dbfce7;
+  --font-color: #008236;
+}
+.entertainment-icon {
+  --bg-badge: #ffe2e2;
+  --font-color: #9f0712;
+}
+
 /* ============================================================================
     Media Quary 👾🎮🎛️
     ===========================================================================
