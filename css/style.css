@@ -386,15 +386,22 @@ a {
 .main-container {
   padding-inline: 1.6rem;
   padding-block: 1.6rem 3.2rem;
-  background-color: #21ff7a;
+  /* For testing */
+  /* background-color: #21ff7a; */
   width: 100%;
 }
 .header {
-  border: 0.2rem solid var(--color-black-200);
   padding: calc(var(--spacing) * 2);
   border-radius: calc(var(--spacing) * 2);
-  box-shadow: 0 0 0.5rem var(--color-black-200);
+  box-shadow: 0 0 5rem var(--color-black-200);
   margin-bottom: calc(var(--spacing) * 7);
+  background: #00b7ff;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 183, 255, 0.06) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(0, 183, 255, 0.06) 100%
+  );
 }
 .header-content {
   display: flex;
@@ -573,13 +580,18 @@ a {
 /* ---|||||||1- ♠️ Recent Activities Widget ||||||||--- */
 
 .finance-widgets-container {
-  background-color: #4a5565;
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: 1fr;
+  /* For testing */
+  /* background-color: #4a5565; */
 }
 .widget-card {
   background-color: var(--color-white-100);
   padding: calc(var(--spacing) * 4);
   border-radius: calc(var(--spacing) * 4);
   box-shadow: 0 0 0.5rem var(--color-black-200);
+  min-width: 0;
 }
 
 .widget-card .widget-title {
@@ -725,7 +737,7 @@ a {
 /* --->  Styling the card container */
 
 .recent-transactions-card {
-  background-color: lightsalmon;
+  /* background-color: lightsalmon; */
 }
 
 /* Header widget contain the widget title and show all link */
@@ -735,18 +747,14 @@ a {
   align-items: flex-start;
 }
 .recent-transactions-card .widget-title {
-  background-color: lightslategray;
+  /* background-color: lightslategray; */
 }
 
 .recent-transactions-card .show-all-transaction-link {
-  background-color: lightpink;
+  /* background-color: lightpink; */
 }
 
 /* --->  Styling the Recent transactions table */
-
-.recent-transaction-table {
-  background-color: lightcyan;
-}
 
 /* ---> Styling the user image first of all */
 .table-body .row-1 .col-1 .transaction-by-info {
@@ -772,12 +780,16 @@ a {
 
 /* ---> Fix the table width to be 100% from its parent and add some guidline border */
 .recent-transactions-wrapper {
-  background-color: lightslategray;
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  /* background-color: lightslategray; */
 }
 .recent-transaction-table {
-  min-width: 100%;
+  min-width: 66.5rem;
+  width: 100%;
   border-collapse: collapse;
-  border: 0.2rem solid black;
+  /* border: 0.2rem solid black; */
 }
 
 .recent-transaction-table td,
@@ -786,7 +798,7 @@ a {
   padding: 0.8rem 0.4rem;
   font-size: 1.2rem;
   text-align: right;
-  color: var(--color-gray-100);
+  color: var(--color-black-500);
 }
 
 .recent-transaction-table td {
@@ -1562,14 +1574,14 @@ Extra extra large	xxl	≥1400px
   .header-content {
     flex-direction: row;
     align-items: center;
-    background-color: #65df95;
+    /* background-color: #65df95; */
   }
 
   .logo-wrapper {
     display: flex;
     align-items: center;
     gap: 1rem;
-    background-color: #96a4e7;
+    /* background-color: #96a4e7; */
     align-content: center;
     width: calc(var(--spacing) * 70);
   }
@@ -1578,7 +1590,7 @@ Extra extra large	xxl	≥1400px
     justify-content: flex-end;
     align-items: center;
     gap: 1.5rem;
-    background-color: #e7000b;
+    /* background-color: #e7000b; */
     justify-self: end;
     order: 3;
   }
@@ -1617,7 +1629,8 @@ Extra extra large	xxl	≥1400px
 */
   /* For testing  */
   .dashboard-container {
-    background-color: #005f78;
+    /* For testing */
+    /* background-color: #005f78; */
   }
   .aside-display-status {
     display: block;
@@ -1696,7 +1709,8 @@ Extra extra large	xxl	≥1400px
   .finance-cards-container {
     flex-direction: row;
     gap: calc(var(--spacing) * 5);
-    background-color: #ba4d00;
+    /* For testing */
+    /* background-color: #ba4d00; */
     justify-content: space-between;
   }
 
