@@ -540,35 +540,35 @@ a {
   margin-bottom: calc(var(--spacing) * 7);
 }
 
-.card {
+.card.income-card {
   background-color: var(--color-white-100);
   padding: calc(var(--spacing) * 8);
   border-radius: calc(var(--spacing) * 4);
   box-shadow: 0 0 0.5rem var(--color-black-200);
 }
-.card h3 {
+.card.income-card h3 {
   color: var(--color-black-200);
 }
-.card p {
-  font-size: 3rem;
+.card.income-card p {
+  font-size: 2.5rem;
   color: var(--color-black-500);
   font-weight: 700;
 }
 
-.card .gross-box i,
-.card .gross-box span,
-.card h3 {
+.card.income-card .gross-box i,
+.card.income-card .gross-box span,
+.card.income-card h3 {
   font-size: 1.4rem;
 }
-.card .gross-box span {
+.card.income-card .gross-box span {
   font-weight: 600;
 }
-.card .gross-box.gross-up .fa-arrow-up,
-.card .gross-box.gross-up span {
+.card.income-card .gross-box.gross-up .fa-arrow-up,
+.card.income-card .gross-box.gross-up span {
   color: var(--color-green-400);
 }
-.card .gross-box.gross-down .fa-arrow-down,
-.card .gross-box.gross-down span {
+.card.income-card .gross-box.gross-down .fa-arrow-down,
+.card.income-card .gross-box.gross-down span {
   color: var(--color-red-500);
 }
 
@@ -1605,7 +1605,6 @@ Extra extra large	xxl	≥1400px
     display: flex;
   }
   .main-container {
-    margin-right: 1.6rem;
     padding: 3.2rem;
   }
   .header {
@@ -1717,14 +1716,54 @@ Extra extra large	xxl	≥1400px
   .card {
     flex: 1 1 0%;
   }
+
+  /* Grid Layout for finance widgets cards */
+
+  .finance-widgets-container {
+    grid-template-columns: repeat(12, 1fr);
+    align-items: start;
+
+    grid-template-areas:
+      /* Row 1 */
+      "income income income income income income   budget budget budget budget budget budget"
+      /* Row 2 */
+      "transactions transactions transactions transactions transactions transactions transactions transactions transactions transactions transactions transactions"
+      /* Row 3 */
+      "activities activities activities activities activities activities   bills bills bills bills bills bills"
+      /* Row 4 */
+      "payment payment payment payment payment payment   summary summary summary summary summary summary";
+  }
+
+  .recent-activities-card {
+    grid-area: activities;
+  }
+  .recent-transactions-card {
+    grid-area: transactions;
+  }
+  .monthly-bills-card {
+    grid-area: bills;
+  }
+  .badget-overview-card {
+    grid-area: budget;
+  }
+  .income-vs-expenses-card {
+    grid-area: income;
+  }
+  .account-summary-card {
+    grid-area: summary;
+  }
+  .payment-card {
+    grid-area: payment;
+  }
 }
+
 @media screen and (min-width: 1024px) {
   /* ============================================================================
     3. Finance cards Section ---> User Over views cards 👾🎮🎛️
     ===========================================================================
 */
-  .card p {
-    font-size: 4rem;
+  .card.income-card p {
+    font-size: 3.6rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -1804,5 +1843,25 @@ Extra extra large	xxl	≥1400px
   .lg-navbar-actions > span {
     font-size: 1.6rem;
     margin-bottom: calc(var(--spacing) * 6);
+  }
+
+  /* ============================================================================
+    Desktop Layout 👾🎮🎛️
+    ===========================================================================
+*/
+  @media screen and (min-width: 1280px) {
+    /* Grid Layout for finance widgets cards */
+
+    .finance-widgets-container {
+      grid-template-areas:
+      /* Row 1 */
+        "budget budget budget budget   income income income income   payment payment payment payment"
+        /* Row 2 */
+        "budget budget budget budget   summary summary summary summary   payment payment payment payment"
+        /* Row 3 */
+        "transactions transactions transactions transactions transactions transactions transactions transactions   activities activities activities activities"
+        /* Row 4 */
+        "transactions transactions transactions transactions transactions transactions transactions transactions   bills bills bills bills";
+    }
   }
 }
