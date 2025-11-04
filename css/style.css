@@ -594,8 +594,6 @@ a {
   min-width: 0;
   display: flex;
   flex-direction: column;
- 
-
 }
 
 .widget-card .widget-title {
@@ -787,14 +785,14 @@ a {
   display: block;
   max-width: 100%;
   overflow-x: auto;
-  flex-grow: 1;
-  /* background-color: lightslategray; */
 }
 .recent-transaction-table {
   min-width: 66.5rem;
-  width: 66.5rem;
+  width: 100%;
   border-collapse: collapse;
-  /* border: 0.2rem solid black; */
+  flex-grow: 1;
+  border-collapse: separate;
+  border-spacing: 0 1rem;
 }
 
 .recent-transaction-table td,
@@ -913,6 +911,7 @@ a {
   padding: 0.2rem 1rem;
   font-size: 1.2rem;
   font-weight: 600;
+  border-radius: 2rem;
   background-color: var(--bg-badge);
   color: var(--font-color);
 }
