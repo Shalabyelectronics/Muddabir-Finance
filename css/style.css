@@ -758,7 +758,7 @@ a {
 
 /* ---> Styling the user image first of all */
 .table-body .row-1 .col-1 .transaction-by-info {
-  background-color: lightyellow;
+  /* background-color: lightyellow; */
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -794,7 +794,7 @@ a {
 
 .recent-transaction-table td,
 .recent-transaction-table th {
-  border: 0.2rem solid black;
+  /* border: 0.2rem solid black; */
   padding: 0.8rem 0.4rem;
   font-size: 1.2rem;
   text-align: right;
@@ -807,7 +807,7 @@ a {
 
 /* --->  prepar the info first column cell the below make the image side by side */
 .table-body .row .col-1 .transaction-by-info {
-  background-color: lightyellow;
+  /* background-color: lightyellow; */
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -1637,37 +1637,44 @@ Extra extra large	xxl	≥1400px
   .aside-lg-status {
     display: none;
   }
-
+  .main-container {
+    margin-right: calc(var(--spacing) * 17);
+  }
   .aside-nav-container {
-    display: fixed;
+    position: fixed;
     top: 0;
     bottom: 0;
+    right: 0;
+    height: 100vh;
+    overflow-y: auto;
     width: calc(var(--spacing) * 17);
-    /* background-color: #21ff7a; */
+    z-index: 999;
+    background-color: white;
   }
 
   .aside-nav-mediaum {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #96a4e7;
+    background-color: white;
     padding: calc(var(--spacing) * 4);
     padding: calc(var(--spacing) * 3);
     width: 100%;
+    height: 100vh;
   }
   .aside-logo-wrapper {
-    width: calc(var(--spacing) * 7.5);
+    width: calc(var(--spacing) * 10);
     height: calc(var(--spacing) * 10);
     background-color: var(--color-blue-500);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: calc(var(--spacing) * 5);
+    border-radius: calc(var(--spacing) * 2);
     padding: var(--spacing);
     margin-bottom: calc(var(--spacing) * 8);
   }
   .aside-nav-list {
-    background-color: #dbfce7;
+    /* background-color: #dbfce7; */
     margin-bottom: calc(var(--spacing) * 5);
   }
   .aside-nav-list ul {
@@ -1682,8 +1689,8 @@ Extra extra large	xxl	≥1400px
   .aside-nav-list ul li a img {
     width: calc(var(--spacing) * 5);
   }
-  .active-list-box {
-    background-color: var(--color-blue-100);
+  .aside-quick-list ul .active-list-box {
+    background-color: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1691,14 +1698,41 @@ Extra extra large	xxl	≥1400px
     height: calc(var(--spacing) * 10);
     padding: calc(var(--spacing) * 2);
     border-radius: calc(var(--spacing) * 3);
-    border-width: calc(var(--spacing) / 2);
-    border-style: solid;
+    border: 0.1rem solid var(--border-color);
+  }
+  .aside-quick-list .active-list-box a i {
+    color: var(--font-color);
   }
   .aside-nav-list ul .md-home a i {
     color: var(--color-blue-400);
   }
   .aside-nav-list ul li a i {
     color: var(--color-black-200);
+  }
+
+  /* Aside (Mediam Size ) action list */
+  .aside-quick-list ul {
+    /* background-color: lightcoral; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  /* mediam size link 2 */
+  .aside-nav-list .md-action-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: calc(var(--spacing) * 10);
+    height: calc(var(--spacing) * 10);
+    padding: calc(var(--spacing) * 2);
+    border-radius: calc(var(--spacing) * 3);
+    border-style: 0.1rem solid var(--color-blue-200);
+    transition: background-color 0.2s;
+  }
+
+  .aside-nav-list .md-action-link:hover {
+    background-color: var(--color-gray-100);
   }
 
   /* ============================================================================
@@ -1777,6 +1811,10 @@ Extra extra large	xxl	≥1400px
     2. Aside Section ---> User Controls and Actions 👾🎮🎛️
     ===========================================================================
 */
+
+  .main-container {
+    margin-right: calc(var(--spacing) * 65);
+  }
   .aside-nav-container {
     width: calc(var(--spacing) * 65);
     padding: calc(var(--spacing) * 6);
@@ -1787,7 +1825,7 @@ Extra extra large	xxl	≥1400px
     gap: calc(var(--spacing) * 8);
   }
   .logo-row {
-    background-color: #65df95;
+    /* background-color: #65df95; */
     display: flex;
     align-items: center;
     gap: calc(var(--spacing) * 4);
@@ -1802,18 +1840,17 @@ Extra extra large	xxl	≥1400px
     color: var(--color-black-200);
   }
   .lg-navbar-links {
-    background-color: lightcyan;
+    /* background-color: lightcyan; */
   }
   .lg-navbar-links ul,
   .lg-navbar-actions ul {
-    background-color: lightskyblue;
+    /* background-color: lightskyblue; */
     display: flex;
     flex-direction: column;
     gap: calc(var(--spacing) * 4);
   }
   .lg-navbar-links ul li,
   .lg-navbar-actions ul li {
-    border: 0.1rem solid black;
     border-radius: 0.8rem;
   }
   .lg-navbar-links ul li a,
@@ -1838,11 +1875,90 @@ Extra extra large	xxl	≥1400px
   }
   /* Row 3 */
   .lg-navbar-actions {
-    background-color: lightpink;
+    /* background-color: lightpink; */
   }
   .lg-navbar-actions > span {
     font-size: 1.6rem;
     margin-bottom: calc(var(--spacing) * 6);
+  }
+
+  /* style the large Aside navbar  */
+  .lg-navbar-links .lg-home a {
+    background-color: var(--color-blue-300);
+    border: 0.1rem solid var(--color-blue-100);
+    color: var(--color-blue-500);
+    border-radius: 0.8rem;
+  }
+
+  .lg-navbar-links .action-link a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 0.8rem;
+    transition: color 0.2s, background-color 0.2s;
+  }
+  .lg-navbar-links .action-link a:hover {
+    background-color: var(--color-gray-100);
+  }
+
+  .lg-navbar-actions ul li a :link,
+  .lg-navbar-actions ul li a:visited,
+  .lg-navbar-links .action-link a:visited,
+  .lg-navbar-links .action-link a:link {
+    color: var(--color-gray-200);
+  }
+  .lg-navbar-links .action-link a span {
+    color: var(--color-gray-200);
+    font-weight: 600;
+  }
+  .lg-navbar-links .action-link a .transaction-icon i {
+    color: var(--color-gray-200);
+    font-size: 1.4rem;
+  }
+
+  /* Fast Action larg navbar */
+  .lg-navbar-actions ul .fast-action-link a .fast-action-icon i {
+    font-size: 1.2rem;
+    color: var(--font-color);
+  }
+  .lg-navbar-actions ul .fast-action-link a .fast-action-icon {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 0.6rem;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lg-navbar-actions ul .fast-action-link {
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  .lg-navbar-actions ul .fast-action-link:hover {
+    background-color: var(--color-gray-100);
+    transform: translate(-0.1rem, -0.1rem);
+  }
+
+  /* Special fast action link */
+  .send-money-action {
+    --border-color:#3f6ead;
+    --bg-color: #dbeafe;
+    --font-color: #193cb8;
+  }
+  .add-money-action {
+    --border-color:#c3fad7;
+    --bg-color: #dbfce7;
+    --font-color: #008236;
+  }
+  .pay-bills-action {
+    --border-color:#ea9cf1;
+    --bg-color: var(--color-purple-100);
+    --font-color: var(--color-purple-500);
+  }
+  .trading-action {
+    --border-color:#f4d3a6;
+    --bg-color: #ffedd4;
+    --font-color: #9f2d00;
   }
 
   /* ============================================================================
