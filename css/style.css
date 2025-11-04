@@ -1359,6 +1359,184 @@ a {
   --font-color: var(--color-red-400);
 }
 
+/* ---|||||||7- 📈  Payment methods Widget ||||||||--- */
+.cards-container > div:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+.cards-container .card-container .card {
+  transform-style: preserve-3d;
+  padding: 0;
+  transition: transform 1500ms;
+}
+
+.card-container {
+  width: auto;
+  height: 200px;
+  perspective: 1500px;
+}
+
+.cards-container .card-container:hover > .card {
+  transform: rotateY(180deg);
+}
+
+.cards-container .card-container .card {
+  position: relative;
+}
+.card .front,
+.card .front .row-3 .right-side p {
+  color: #fff;
+}
+.cards-container .card-container .card,
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.8rem;
+}
+
+.front,
+.back {
+  position: absolute;
+  box-shadow: 0 0 2rem 0.5rem rgba(50, 50, 50, 0.5);
+  padding: 2.8rem;
+  backface-visibility: hidden;
+}
+.card .front {
+  background-color: var(--bg-front-color);
+}
+.card .back {
+  background-color: var(--bg-back-color);
+}
+.card .front .row-1 .card-left-icon {
+  width: 5rem;
+}
+
+/* Front card style */
+.card .front .row-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .front .row-1 .card-right-icon .card-ship {
+  position: relative;
+  width: 5rem;
+  height: 4rem;
+
+  border-radius: 0.3rem;
+
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.card .front .row-1 .card-right-icon .card-ship::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.5rem;
+  height: 2rem;
+  border-radius: 0.2rem;
+  background-color: #ffffff;
+}
+
+/* Card number row-2*/
+.card .front .row-2 .card-number span {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+/* front name and expiry date row 3*/
+.card .front .row-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card .front .row-3 .right-side h5 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.card .front .row-3 .right-side p {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.card .front .row-3 .left-side h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.card .front .row-3 .left-side span {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+/* Back card style */
+.card .back {
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.card .back > .card-row:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+
+.card .back .row-1 .gradient {
+  width: 100%;
+  height: 3.5rem;
+  background: linear-gradient(to left, rgb(44, 43, 43), black);
+}
+
+.card .back .row-2 span {
+  color: rgb(183, 177, 177);
+}
+
+.card .back .row-3 .signature-wrapper {
+  background-color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  display: flex;
+}
+
+.card .back .row-3 .signature-wrapper span {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000;
+  margin-left: auto;
+}
+
+.card .back .row-3 .signature-wrapper .gradient {
+  height: auto;
+  width: 100%;
+  background: linear-gradient(to left, white, gray, white);
+}
+
+.card .back .row-4 .cvv-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.card .back .row-4 .cvv-wrapper .cvv-number {
+  background-color: white;
+  color: #000;
+  padding: 0.2rem 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4rem;
+}
+
+.card .back .row-4 .cvv-wrapper .cvv-number span {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* Spicail Style each payment type */
+.visa {
+  --bg-front-color: var(--color-blue-800);
+  --bg-back-color: rgb(0, 0, 0);
+}
+.master-card {
+  --bg-front-color: rgb(199, 0, 54);
+  --bg-back-color: rgb(0, 0, 0);
+}
+
 /* ============================================================================
     Media Quary 👾🎮🎛️
     ===========================================================================
